@@ -51,6 +51,6 @@ public class EffectiveHashCode {
                this.weight == effective.weight &&
                this.isMember == effective.isMember &&
                this.credits == effective.credits &&
-               Arrays.equals(this.interests,effective.interests);
+               Arrays.equals(this.interests, effective.interests);
     }
 }
