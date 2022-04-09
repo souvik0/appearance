@@ -27,7 +27,7 @@ public class EffectiveHashCode {
         int prime = 31;
         int result = 17;
 
-        result = prime * result + ((this.name == null ? 0 : name.hashCode()));
+        result = prime * result + this.name == null ? 0 : name.hashCode();
         result = prime * result + (int) (id ^ (id >>> 32));
         result = prime * result + age;
         result = prime * result + Float.floatToIntBits(weight); // Float can be converted to ints only
