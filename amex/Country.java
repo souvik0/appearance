@@ -8,14 +8,14 @@ public final class Country {
     private final ArrayList listOfStates;
 
     public Country(String countryName, ArrayList listOfStates) {
-    super();
-    this.countryName = countryName;
-    // Creating deep copy for mutable object
-    ArrayList tempList = new ArrayList();
-    for (int i = 0; i < listOfStates.size(); i++) {
-         tempList.add(listOfStates.get(i));
-    }
-    this.listOfStates = tempList;
+        super();
+        this.countryName = countryName;
+        // Creating deep copy for mutable object
+        ArrayList tempList = new ArrayList();
+        for (int i = 0; i < listOfStates.size(); i++) {
+            tempList.add(listOfStates.get(i));
+        }
+        this.listOfStates = tempList;
     }
 
     public String getCountryName() {
