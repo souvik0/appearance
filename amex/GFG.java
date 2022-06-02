@@ -13,8 +13,10 @@ public class GFG {
                       int comp = map.get(k1).compareTo(map.get(k2));
                       if (comp == 0)
                           return 1;
+                      if else
+                          return comp;
                       else
-                          return comp; // Return -comp for reverse order
+                        return -comp;  // Return -comp for reverse order
                   }
         };
         // SortedMap created using the comparator

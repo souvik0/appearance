@@ -18,14 +18,14 @@ public class AnagramGroupingProblem {
 
     //Common property between words are ascii
     public static int stringToAscii(String str) {
-        int sum = 0;
+        int finalascii = 0;
 
         for (int i = 0; i < str.length(); i++) {
              int ascii = (int) str.charAt(i);
-             sum = sum + ascii;
+             finalascii = finalascii + ascii;
         }
 
-        return sum;
+        return finalascii;
     }
 
     public static void findAnagramGroup(String[] strArr) {
