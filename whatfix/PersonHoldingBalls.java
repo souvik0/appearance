@@ -12,7 +12,7 @@ public class PersonHoldingBalls {
 	public static void findOutPersonToTalk (int[] arr) {
         Stack<Integer> tempStack = new Stack<Integer>();
         tempStack.push(arr[0]);
-        
+
         for (int i = 1 ; i<arr.length; i++) {
             while (!tempStack.isEmpty() && tempStack.peek() < arr[i]) {
                   System.out.println("Person having " + tempStack.pop() + "ball at" +i + "th location will talk to" +
@@ -24,6 +24,4 @@ public class PersonHoldingBalls {
             System.out.println("Person holding " +tempStack.pop() + "no of balls isn't communicate with anyone" );
         }
     }
-
-
 }
