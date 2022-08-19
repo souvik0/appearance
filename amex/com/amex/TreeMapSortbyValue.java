@@ -1,7 +1,7 @@
 package com.amex;
 
 import java.util.*;
-public class GFG {
+public class TreeMapSortbyValue {
     public static <K, V extends Comparable<V> > Map<K, V> valueSort(final Map<K, V> map) {
         // Static Method with return type Map and
         // extending comparator class which compares values
