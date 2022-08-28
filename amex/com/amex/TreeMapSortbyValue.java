@@ -2,7 +2,7 @@ package com.amex;
 
 import java.util.*;
 public class TreeMapSortbyValue {
-    public static <K, V extends Comparable<V> > Map<K, V> valueSort(final Map<K, V> map) {
+    public static <K, V extends Comparable<V>> Map<K, V> valueSort(Map<K, V> map) {
         // Static Method with return type Map and
         // extending comparator class which compares values
         // associated with two keys
@@ -11,10 +11,12 @@ public class TreeMapSortbyValue {
                   // two keys
                   public int compare(K k1, K k2) {
                       int comp = map.get(k1).compareTo(map.get(k2));
-                      if (comp == 0)
+                      if (comp == 0) {
                           return 1;
-                      else
-                          return (comp > 1) ? comp : -comp;  // Return -comp for reverse order
+                      }
+                      else {
+                        return (comp > 1) ? comp : -comp; // Return -comp for reverse order
+                      }
                   }
         };
         // SortedMap created using the comparator
@@ -24,7 +26,7 @@ public class TreeMapSortbyValue {
     }
 
     public static void main(String[] args) {
-        TreeMap<String, Integer> map = new TreeMap<String, Integer>();
+        Map<String, Integer> map = new HashMap<String, Integer>();
         // Put elements to the map
         map.put("Anshu", 2);
         map.put("Rajiv", 4);
@@ -32,14 +34,14 @@ public class TreeMapSortbyValue {
         map.put("Golu", 5);
         map.put("Sita", 1);
         // Calling the method valueSort
-        Map sortedMap = valueSort(map);
+        Map<String, Integer> sortedMap = valueSort(map);
         // Get a set of the entries on the sorted map
-        Set set = sortedMap.entrySet();
+        Set<Map.Entry<String, Integer>> set = sortedMap.entrySet();
         // Get an iterator
-        Iterator i = set.iterator();
+        Iterator<Map.Entry<String, Integer>> i = set.iterator();
         // Display elements
         while (i.hasNext()) {
-            Map.Entry mp = (Map.Entry)i.next();
+            Map.Entry<String, Integer> mp = (Map.Entry<String, Integer>)i.next();
             System.out.print(mp.getKey() + ": ");
             System.out.println(mp.getValue());
             

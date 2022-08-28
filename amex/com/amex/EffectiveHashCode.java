@@ -1,5 +1,6 @@
 package com.amex;
 
+// Properties use for hashcode, should be used same for equals method also
 import java.util.Arrays;
 public class EffectiveHashCode {
 
@@ -40,11 +41,20 @@ public class EffectiveHashCode {
 
     @Override
     public boolean equals(Object obj) {
-        if (!(obj instanceof EffectiveHashCode)) {
+        if (obj == null) {
+            return false;
+        }
+
+        if (this != obj) {
+            return false;
+        }
+
+        if (obj.getClass() != this.getClass()) {
             return false;
         }
 
         EffectiveHashCode effective = (EffectiveHashCode) obj;
+
         return this.id == effective.id &&
                this.name.equals(effective.name) &&
                this.age == effective.age &&

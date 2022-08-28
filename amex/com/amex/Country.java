@@ -7,13 +7,12 @@ public final class Country {
     // declared private final instance variable
     private final String countryName;
     // Mutable object
-    private final ArrayList listOfStates;
+    private final ArrayList<String> listOfStates;
 
-    public Country(String countryName, ArrayList listOfStates) {
-        super();
+    public Country(String countryName, ArrayList<String> listOfStates) {
         this.countryName = countryName;
         // Creating deep copy for mutable object
-        ArrayList tempList = new ArrayList();
+        ArrayList<String> tempList = new ArrayList<String>();
         for (int i = 0; i < listOfStates.size(); i++) {
             tempList.add(listOfStates.get(i));
         }
@@ -25,13 +24,14 @@ public final class Country {
         return countryName;
     }
 
-    public ArrayList getListOfStates() {
+    @SuppressWarnings("unchecked")
+    public ArrayList<String> getListOfStates() {
         // Returning cloned object 
-        return (ArrayList) listOfStates.clone();
+        return (ArrayList<String>) listOfStates.clone();
     }
 
     public static void main(String[] args) {
-        ArrayList listOfStates = new ArrayList();
+        ArrayList<String> listOfStates = new ArrayList<String>();
         listOfStates.add("Madhya Pradesh");
         listOfStates.add("Maharastra");
         listOfStates.add("Gujrat");
