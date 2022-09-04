@@ -8,6 +8,7 @@ public class MyArrayList<T> {
 
     private Object[] myStore;
     private int actSize;
+    private int capacity;
 
     public MyArrayList(){
         myStore = new Object[10]; // Default size
@@ -15,12 +16,13 @@ public class MyArrayList<T> {
     }
 
     public MyArrayList(int capacity) {
+        this.capacity = capacity;
         myStore = new Object[capacity];
         actSize = 0;
     }
 
     public void add(Object obj){
-        if (myStore.length - actSize <= 5){
+        if ((myStore.length - actSize <= 5) || (myStore.length - actSize <= capacity/2)){
             resizeDynamicArray();
         }
         myStore[actSize] = obj;
@@ -57,6 +59,7 @@ public class MyArrayList<T> {
     public void forLoop() {
         Consumer<Object> action = t -> {
             if (t == null) {
+                throw new NullPointerException();
             } else {
                 System.out.println(t.toString());
             }
@@ -74,6 +77,7 @@ public class MyArrayList<T> {
         System.out.println("\nNew length: "+ myStore.length);
     }
 
+    @SuppressWarnings("removal")
     public static void main(String a[]){
         MyArrayList<Integer> mal = new MyArrayList<Integer>();
         mal.add(new Integer(2));
