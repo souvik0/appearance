@@ -15,6 +15,7 @@ public class LoggingClient {
         Logger.notifyLoggingPlatform(Loglevel.INFO, LogDelivery.KIVANA);
 
         Logger.detachLoggingPlatform(consoleLoggingPlatform);
+        Logger.detachLoggingPlatform(fileLoggingPlatform);
         Logger.attachLoggingPlatform(aggregatorLoggingPlatform);
         // Writting debug logs to file & aggregator & pushing to SPLUNK
         Logger.notifyLoggingPlatform(Loglevel.DEBUG, LogDelivery.SPLUNK);
