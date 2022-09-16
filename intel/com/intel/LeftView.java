@@ -1,5 +1,7 @@
 package com.intel;
 
+// Level order traversal with 1st node from every level
+
 import java.util.LinkedList;
 import java.util.Queue;
 
@@ -27,6 +29,7 @@ public class LeftView {
             while (i++ < nodeCount) {
                 TreeNode popedNode = queue.poll();
                 // check first node of every level
+                // 0 will return root node, not the 1st left node.
                 if (i == 1) {
                     System.out.println(popedNode.data + " ");
                 }
