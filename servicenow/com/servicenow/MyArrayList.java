@@ -43,6 +43,7 @@ public class MyArrayList<T> {
             myStore[index] = null;
             int tmp = index;
 
+            // Adjusting rest of the elements
             while (tmp < actSize){
                 myStore[tmp] = myStore[tmp + 1];
                 myStore[tmp + 1] = null;
