@@ -30,7 +30,7 @@ public class MyArrayList<T> {
     }
 
     public Object get(int index){
-        if(index < actSize){
+        if (index < actSize){
             return myStore[index];
         } else {
             throw new ArrayIndexOutOfBoundsException();
