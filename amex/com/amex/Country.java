@@ -26,7 +26,7 @@ public final class Country {
 
     @SuppressWarnings("unchecked")
     public ArrayList<String> getListOfStates() {
-        // Returning cloned object 
+        // Returning cloned object
         return (ArrayList<String>) listOfStates.clone();
     }
 

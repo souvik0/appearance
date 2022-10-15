@@ -59,9 +59,7 @@ public class MyArrayList<T> {
 
     public void forLoop() {
         Consumer<Object> action = t -> {
-            if (t == null) {
-                throw new NullPointerException();
-            } else {
+            if (t != null) {
                 System.out.println(t.toString());
             }
         };
