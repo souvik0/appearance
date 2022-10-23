@@ -4,7 +4,7 @@ package com.walmart;
 
 public class CountIsland {
 
-    static final int ROW = 4, COL = 5;
+    public static final int ROW = 4, COL = 5;
 
     public static void main(String[] args) {
         int M[][] = new int[][] {{1, 1, 0, 0, 0},
@@ -34,18 +34,17 @@ public class CountIsland {
     // A utility function to do DFS for a 2D matrix.
     // It only considers the 8 neighbors as adjacent vertices
     public static void DFS(int M[][], int startRow, int startCol, boolean visited[][]) {
+        // Mark the source cell as visited
+        visited[startRow][startCol] = true;
         // These arrays are used to get row and column numbers
         // of 8 neighbors of a given cell
-        int[] rowNbr = new int[] {-1, 0, 1, 0};
-        int[] colNbr = new int[] {0, -1, 0, 1};
+        int[] Path_Row = new int[] {-1, 0, 1, 0};
+        int[] Path_Col = new int[] {0, -1, 0, 1};
 
-        // Mark this cell as visited
-        visited[startRow][startCol] = true;
-
-        // Recur for all connected neighbours
-        for (int k = 0; k < 4; k++) {
-             int rowNext = startRow + rowNbr[k];
-             int colNext = startCol + colNbr[k];
+        // Recur for all connected neighbors
+        for (int k = 0; k < Path_Row.length; k++) {
+             int rowNext = startRow + Path_Row[k];
+             int colNext = startCol + Path_Col[k];
              if (isSafe(M, rowNext, colNext, visited)) {
                 DFS(M, rowNext, colNext, visited);
             }
