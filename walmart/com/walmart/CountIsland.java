@@ -51,7 +51,7 @@ public class CountIsland {
         }
     }
 
-     // A function to check if a given cell (row, col) can be included in DFS
+    // A function to check if a given cell (row, col) can be included in DFS
     public static boolean isSafe(int M[][], int row, int col, boolean visited[][]) {
         // row number is in range, column number is in range
         // and value is 1 and not yet visited
