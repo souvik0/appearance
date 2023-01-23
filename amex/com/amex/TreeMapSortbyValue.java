@@ -44,7 +44,6 @@ public class TreeMapSortbyValue {
             Map.Entry<String, Integer> mp = (Map.Entry<String, Integer>)i.next();
             System.out.print(mp.getKey() + ": ");
             System.out.println(mp.getValue());
-            
         }
     }
 }

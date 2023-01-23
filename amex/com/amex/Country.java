@@ -44,10 +44,9 @@ public final class Country {
         System.out.println("Updated Country : " + country.getCountryName());
         System.out.println("List of states : " + country.getListOfStates());
         // It will  not be added to the list because we are using clone in
-        // getListOfStates
+        // getListOfStates() method.
         country.getListOfStates().add("Kerala");
-        // It will not be added to the list because we are using deep copy in
-        // constructor
+        // It will not be added to the list because we are using deep copy in constructor
         listOfStates.add("Rajasthan");
         System.out.println("Updated List of states : " + country.getListOfStates());
     }

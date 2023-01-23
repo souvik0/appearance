@@ -1,6 +1,7 @@
 package com.amex;
 
-// Properties use for hashcode, should be used same for equals method also
+// Properties use for hashcode, should be used same for equals method also.
+// It is recommended to use getters while using with ORM framework to mitigate risk of lazy loading.
 import java.util.Arrays;
 public class EffectiveHashCode {
 
