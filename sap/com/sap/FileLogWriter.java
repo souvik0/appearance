@@ -4,7 +4,7 @@ public class FileLogWriter implements LoggingPlatform{
 
     @Override
     public void write(Loglevel level) {
-        System.out.println("Writting log message to File having log level: " +level.toString());
+        System.out.println("Writting log message to File having log level: " + level.toString());
     }
 
     @Override

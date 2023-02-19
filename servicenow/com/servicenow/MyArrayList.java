@@ -6,7 +6,7 @@ import java.util.function.Consumer;
 
 public class MyArrayList<T> {
 
-    private Object[] myStore;
+    private Object[] myStore;// This is the dynamic array
     private int actSize;
     private int capacity;
 

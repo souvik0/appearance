@@ -39,6 +39,7 @@ public class EmptyState implements StatePattern, Serializable {
     public void invokeNextState(BoilerContext context) {
         if (context.getStates() instanceof EmptyState) {
             context.setStates(FilledState.getSingletonLazyInstance());
+            // To continue with the method Chaining
             ((FilledState) context.getStates()).updateState(context);
         }
     }

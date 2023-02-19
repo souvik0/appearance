@@ -6,6 +6,7 @@ public class StringTest {
         String s1 = "Souvik";
         String s2 = "Ganesh";
         s2 = s1;
+        System.out.println(s1);
         s1 = "Ganesh";
         System.out.println(s2);
         System.out.println(s1);
