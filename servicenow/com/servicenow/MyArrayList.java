@@ -22,6 +22,7 @@ public class MyArrayList<T> {
     }
 
     public void add(Object obj){
+        // Resize dynamic array if occupied elements are more than half of the array
         if ((myStore.length - actSize <= 5) || (myStore.length - actSize <= capacity/2)){
             resizeDynamicArray();
         }

@@ -23,7 +23,7 @@ public class CountIsland {
                     // visited yet, then new island found, Visit all
                     // cells in this island and increment island count
                     countOfIslands++;
-                    DFS(M, i, j, visited);
+                    DFSUtil(M, i, j, visited);
                 }
             }
         }
@@ -33,11 +33,11 @@ public class CountIsland {
 
     // A utility function to do DFS for a 2D matrix.
     // It only considers the 8 neighbors as adjacent vertices
-    public static void DFS(int M[][], int startRow, int startCol, boolean visited[][]) {
+    public static void DFSUtil(int M[][], int startRow, int startCol, boolean visited[][]) {
         // Mark the source cell as visited
         visited[startRow][startCol] = true;
         // These arrays are used to get row and column numbers
-        // of 8 neighbors of a given cell
+        // of 4 neighbors of a given cell
         int[] Path_Row = new int[] {-1, 0, 1, 0};
         int[] Path_Col = new int[] {0, -1, 0, 1};
 
@@ -46,7 +46,7 @@ public class CountIsland {
              int rowNext = startRow + Path_Row[k];
              int colNext = startCol + Path_Col[k];
              if (isSafe(M, rowNext, colNext, visited)) {
-                DFS(M, rowNext, colNext, visited);
+                 DFSUtil(M, rowNext, colNext, visited);
             }
         }
     }
