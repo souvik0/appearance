@@ -13,8 +13,7 @@ public class TreeMapSortbyValue {
                       int comp = map.get(k1).compareTo(map.get(k2));
                       if (comp == 0) {
                           return 1;
-                      }
-                      else {
+                      } else {
                         return (comp > 0) ? comp : -comp; // Return -comp for reverse order
                       }
                   }
