@@ -3,13 +3,13 @@ package com.servicenow;
 import java.util.ArrayList;
 import java.util.List;
 
-/* Time Complexity: O(1)
+/* Time Complexity: O(n)
    Space Complexity: O(1)
 */
 public class ValidIPAddress {
 
     public static void main(String[] args) {
-        String ipString = "255255255";
+        String ipString = "25011255255";
         System.out.println(validIpAddress(ipString).toString());
     }
 
@@ -18,7 +18,6 @@ public class ValidIPAddress {
 
         for (int i = 1; i < Math.min(ipString.length(), 4); i++) {
             String[] currentIpAddressParts = new String[] {"", "", "", ""};
-
             currentIpAddressParts[0] = ipString.substring(0, i);
             if (!isValidPart(currentIpAddressParts[0])) {
                 continue;
