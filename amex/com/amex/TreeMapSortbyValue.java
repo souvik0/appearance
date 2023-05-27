@@ -14,7 +14,7 @@ public class TreeMapSortbyValue {
                       if (comp == 0) {
                           return 1;
                       } else {
-                        return (comp > 0) ? comp : -comp; // Return -comp for reverse order
+                          return (comp > 0) ? comp : -comp; // Return -comp for reverse order
                       }
                   }
         };

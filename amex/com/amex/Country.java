@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public final class Country {
 
-    // declared private final instance variable
+    // Declared private final instance variable
     private final String countryName;
     // Mutable object
     private final ArrayList<String> listOfStates;
