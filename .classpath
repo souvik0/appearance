@@ -7,6 +7,7 @@
 	<classpathentry kind="src" path="servicenow"/>
 	<classpathentry kind="src" path="vmware"/>
 	<classpathentry kind="src" path="walmart"/>
-	<classpathentry kind="src" path="whatfix"/>
+	<classpathentry kind="src" path="tesco"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/5"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
