@@ -3,11 +3,11 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="src" path="amex"/>
 	<classpathentry kind="src" path="intel"/>
-	<classpathentry kind="src" path="sap"/>
 	<classpathentry kind="src" path="servicenow"/>
 	<classpathentry kind="src" path="vmware"/>
 	<classpathentry kind="src" path="walmart"/>
 	<classpathentry kind="src" path="tesco"/>
+	<classpathentry kind="src" path="openText"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/5"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

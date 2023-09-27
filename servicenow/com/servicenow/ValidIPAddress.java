@@ -16,6 +16,7 @@ public class ValidIPAddress {
     public static List<String> validIpAddress(String ipString) {
         List<String> ipAddressFound = new ArrayList<String>();
 
+        // It must rotate from 1 to avoid NumberFormatException
         for (int i = 1; i < Math.min(ipString.length(), 4); i++) {
             String[] currentIpAddressParts = new String[] {"", "", "", ""};
             currentIpAddressParts[0] = ipString.substring(0, i);
