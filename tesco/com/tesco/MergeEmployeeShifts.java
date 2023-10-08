@@ -1,7 +1,5 @@
 package com.tesco;
 
-import java.util.Comparator;
-import java.util.List;
 import java.util.*;
 
 public class MergeEmployeeShifts {
@@ -23,7 +21,7 @@ public class MergeEmployeeShifts {
          }
 
          // Sort intervals by their start values
-         intervals.sort(Comparator.comparingInt(interval -> interval.startShift));
+         intervals.sort(Comparator.comparing(interval -> interval.startShift));
 
          Interval currentInterval = intervals.get(0);
 
