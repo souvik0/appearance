@@ -24,12 +24,14 @@ public class ValidIPAddress {
                 continue;
             }
 
+            // If part before is valid
             for (int j = i + 1; j < i + Math.min(ipString.length() - i, 4); j++) {
                 currentIpAddressParts[1] = ipString.substring(i, j);
                 if (!isValidPart(currentIpAddressParts[1])) {
                     continue;
                 }
 
+                // If parts before is valid
                 for (int k = j + 1; k < j + Math.min(ipString.length() - j, 4); k++) {
                     currentIpAddressParts[2] = ipString.substring(j, k);
                     currentIpAddressParts[3] = ipString.substring(k);

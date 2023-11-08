@@ -37,6 +37,7 @@ public class EffectiveHashCode {
         long creditsLong = Double.doubleToLongBits(credits); // Double can only converted to Long
         result = prime * result + (int) (creditsLong ^ (creditsLong >>> 32));
         result = prime * result + Arrays.hashCode(interests);
+
         return result;
     }
 
