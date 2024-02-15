@@ -11,13 +11,17 @@ public class MergeEmployeeShifts {
         empShiftList.add(new Interval(8, 10));
         empShiftList.add(new Interval(15, 18));
 
-        mergeShift(empShiftList);
+        System.out.println(mergeShift(empShiftList).toString());
     }
 
     public static List<Interval> mergeShift(List<Interval> intervals) {
          List<Interval> mergedIntervals = new ArrayList<>();
          if (intervals == null || intervals.isEmpty()) {
              return mergedIntervals;
+         }
+
+         if (intervals.size() == 1) {
+             mergedIntervals.add(intervals.get(0));
          }
 
          // Sort intervals by their start values
