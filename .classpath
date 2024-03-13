@@ -8,7 +8,7 @@
 	<classpathentry kind="src" path="walmart"/>
 	<classpathentry kind="src" path="tesco"/>
 	<classpathentry kind="src" path="openText"/>
-	<classpathentry kind="src" path="advanced"/>
+	<classpathentry kind="src" path="EPAM"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/5"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
