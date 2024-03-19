@@ -7,9 +7,9 @@ import java.util.*;
 
 public class SimpleCache<K, V> {
 
-    Map<K, EntryNode<K, V>> tempMap;
-    EntryNode<K, V> start, end;
-    int DEFAULT_CACHE_SIZE = 3;
+    private Map<K, EntryNode<K, V>> tempMap;
+    private EntryNode<K, V> start, end;
+    private int DEFAULT_CACHE_SIZE = 3;
 
     public static void main(String[] args) {
         SimpleCache<String, String> simpleCache = new SimpleCache<String, String>();
@@ -24,11 +24,13 @@ public class SimpleCache<K, V> {
         System.out.println(simpleCache.get("K2"));
     }
 
+    @SuppressWarnings("unchecked")
     public SimpleCache() {
         tempMap = (Map<K, EntryNode<K, V>>) new HashMap<K, V>();
         start = end = null;
     }
 
+    @SuppressWarnings("unchecked")
     public V get(K key) {
         EntryNode<K, V> entry = null;
         if (tempMap.containsKey(key)) {
@@ -59,6 +61,7 @@ public class SimpleCache<K, V> {
             } else {
                 addAtFirst(newEntry);
             }
+
             tempMap.put(key, newEntry);
         }
     }
@@ -73,6 +76,7 @@ public class SimpleCache<K, V> {
         }
     }
 
+    @SuppressWarnings("unchecked")
     public void removeNode (EntryNode<K, V> node) {
         if (node.left != null) {
             node.left.right = node.right;
