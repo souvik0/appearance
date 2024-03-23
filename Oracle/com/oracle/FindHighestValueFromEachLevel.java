@@ -1,7 +1,6 @@
 package com.oracle;
 
 import java.util.*;
-
 import com.intel.TreeNode;
 
 public class FindHighestValueFromEachLevel {
